@@ -1,46 +1,84 @@
-# 🛡️ Network Security Project – Phishing Detection Using Machine Learning
+# 🛡️ Network Security Project – Phishing Detection Using Machine Learning & MLOps
 
-An end-to-end **Network Security & Phishing Detection** project using Machine Learning and full MLOps integration.  
-This system detects phishing or malicious data using ML algorithms and is fully automated using CI/CD, MLflow, Docker, and AWS cloud deployment.
+A complete **End-to-End Machine Learning and MLOps project** for detecting phishing attacks.  
+This system builds, tracks, packages, and deploys a phishing detection ML model using:
+
+- **Machine Learning Algorithms**
+- **FastAPI** backend  
+- **MongoDB Atlas** cloud database  
+- **MLflow** for experiment tracking  
+- **DagsHub** for data + model versioning  
+- **GitHub Actions** for CI/CD  
+- **Docker** containerization  
+- **AWS ECR + EC2** for production deployment  
+
+This is a fully automated and production-ready cybersecurity system.
 
 ---
 
 ## 🚀 Project Overview
 
-Cybersecurity threats such as **phishing** are increasing rapidly.  
-This project develops a scalable ML-based system that:
+This project identifies phishing or malicious URLs/data using ML-based classification models.  
+It includes:
 
-- Detects phishing URLs/data  
-- Automatically trains and evaluates ML models  
-- Tracks all experiments using MLflow  
-- Uses GitHub Actions for CI/CD  
-- Containers the model using Docker  
-- Deploys the final model on **AWS EC2** through **AWS ECR**
+- Data ingestion & preprocessing  
+- Feature engineering  
+- Model training & evaluation  
+- MLflow experiment tracking  
+- API creation using FastAPI  
+- Database logging using MongoDB Atlas  
+- CI/CD automation with GitHub Actions  
+- Docker-based deployment on AWS EC2 using AWS ECR  
 
 ---
 
-## 🧠 Machine Learning Approach
+## 🧠 Machine Learning
 
-We used several ML algorithms to detect phishing attacks, including:
+Multiple ML models were trained and evaluated, including:
 
 - Logistic Regression  
 - Random Forest  
 - XGBoost  
-- Decision Tree  
 - SVM  
 - Gradient Boosting  
+- Decision Tree  
 
-The best-performing model is selected based on:
+All experiments are tracked using **MLflow**, and the best model is selected based on evaluation metrics.
 
-- Accuracy  
-- Precision  
-- Recall  
-- F1 Score  
-- ROC-AUC  
+---
+
+## 📈 Model Performance (Sample Metrics)
+
+> ⚠️ *These are placeholder values. Replace them with actual metrics when your model is trained.*
+
+| Metric        | Score   |
+|---------------|---------|
+| **Accuracy**  | 96.4%   |
+| **Precision** | 95.8%   |
+| **Recall**    | 96.9%   |
+| **F1 Score**  | 96.3%   |
+| **ROC–AUC**   | 0.985   |
+
+---
+
+## ⚡ FastAPI Application
+
+A **FastAPI backend** is used to serve the phishing detection model.
+
+### Features:
+- `/predict` endpoint for real-time prediction  
+- MongoDB logging of each request  
+- Swagger API documentation  
+- High performance (async support)
+
+### Run FastAPI locally:
+
+```bash
+uvicorn app:app --host 0.0.0.0 --port 8000
+
 
 All experimentation is tracked using **MLflow**, and results/data are stored using **DagsHub**.
 
----
 
 ## 📁 Project Structure
 
@@ -61,8 +99,6 @@ All experimentation is tracked using **MLflow**, and results/data are stored usi
 └── README.md
 
 
-
----
 
 ## 📊 MLflow Tracking
 
@@ -98,7 +134,7 @@ Workflow file is located at:
 
 ---
 
-## 🐳 Docker Containerization
+ 🐳 Docker Containerization
 
 The project is fully dockerized for reproducibility.
 
@@ -116,17 +152,5 @@ DagsHub integration
 Cloud deployment on AWS
 
 Docker containerization
-
-Model version control
-
-Reproducible experiments
-
-📌 Future Enhancements
-
-Deploy using AWS Lambda (serverless)
-
-Add deep learning models (LSTM/Transformers)
-
-Add a React/Streamlit web dashboard
 
 Real-time phishing URL scanning
